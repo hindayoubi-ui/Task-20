@@ -115,6 +115,6 @@ Product images are uploaded to the `uploads/products/` folder.
 - A new Admin account can only be created by an already logged-in Admin.
 - The database name used by this project is `task 20`.
 
-## Project Submission
+
 
 
