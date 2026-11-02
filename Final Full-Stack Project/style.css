@@ -1,0 +1,736 @@
+
+/* 
+   PROJECT COLOR PALETTE
+ */
+
+:root {
+    --deep-navy: #243247;
+    --forest-teal: #365B58;
+    --soft-sage: #8BA69B;
+    --warm-ivory: #F4F3EE;
+    --soft-gold: #D6B875;
+}
+
+
+/* 
+   GENERAL PAGE SETTINGS
+ */
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--deep-navy);
+    background-color: var(--warm-ivory);
+}
+
+/* Background Color */
+.bg-light {
+    background-color: var(--warm-ivory) !important;
+}
+
+
+/* 
+   SIDEBAR
+ */
+
+.app-sidebar {
+    width: 250px;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: var(--deep-navy);
+    color: var(--warm-ivory);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+/* Sidebar Brand */
+.sidebar-brand {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: var(--warm-ivory);
+}
+
+.sidebar-brand i {
+    color: var(--soft-gold);
+    margin-right: 8px;
+}
+
+/* Logged-in User */
+.sidebar-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: var(--forest-teal);
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.sidebar-user i {
+    font-size: 28px;
+    color: var(--soft-sage);
+}
+
+.sidebar-user small {
+    display: block;
+    color: var(--warm-ivory);
+    margin-top: 4px;
+}
+
+/* Sidebar Links */
+.app-sidebar .nav-link {
+    color: var(--warm-ivory);
+    padding: 12px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+}
+
+.app-sidebar .nav-link i {
+    margin-right: 8px;
+}
+
+.app-sidebar .nav-link:hover,
+.app-sidebar .nav-link.active {
+    background-color: var(--forest-teal);
+    color: white;
+}
+
+.app-sidebar .nav-link.active {
+    border-left: 3px solid var(--soft-gold);
+}
+
+/* Logout Button in Sidebar */
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 30px;
+}
+
+.app-sidebar .logout-link {
+    border: 1px solid var(--soft-sage);
+    color: var(--warm-ivory);
+    transition: background-color 0.3s ease,
+                border-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.app-sidebar .logout-link:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #ffffff;
+}
+
+
+/* 
+   MAIN CONTENT
+ */
+
+.main-content {
+    min-width: 0;
+    flex: 1;
+    padding: 24px;
+    background-color: var(--warm-ivory);
+}
+
+
+/* 
+   CARDS
+ */
+
+.card {
+    border: 1px solid #E2E4DE;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+}
+
+
+/* 
+   PRIMARY BUTTONS
+ */
+
+.btn-primary {
+    background-color: var(--forest-teal);
+    border-color: var(--forest-teal);
+}
+
+.btn-primary:hover {
+    background-color: var(--deep-navy);
+    border-color: var(--deep-navy);
+}
+
+
+/* 
+   FORM FOCUS
+ */
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--soft-sage);
+    box-shadow: 0 0 0 0.2rem rgba(139, 166, 155, 0.25);
+}
+
+
+/* 
+   SECTION TITLE
+ */
+
+.section-title {
+    border-left: 4px solid var(--soft-gold);
+    padding-left: 12px;
+}
+
+
+/* 
+   RESPONSIVE SIDEBAR
+ */
+
+@media (max-width: 767px) {
+
+    .app-sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .app-sidebar .nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .app-sidebar .nav-link {
+        padding: 10px;
+        margin-bottom: 0;
+    }
+
+    .sidebar-brand {
+        margin-bottom: 15px;
+    }
+
+    .sidebar-bottom {
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+
+    .main-content {
+        padding: 16px;
+    }
+}
+
+
+/* 
+   FOOTER
+ */
+
+.app-footer {
+    padding: 20px;
+    margin-top: 30px;
+    background-color: var(--deep-navy);
+    color: var(--warm-ivory);
+    text-align: center;
+    border-top: 3px solid var(--soft-gold);
+}
+
+.app-footer p {
+    margin-bottom: 5px;
+}
+
+.app-footer p:last-child {
+    color: var(--soft-sage);
+    font-size: 14px;
+}
+
+/* Responsive Footer */
+@media (max-width: 767px) {
+
+    .app-footer {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+}
+
+
+/* 
+   LOGIN PAGE
+ */
+
+.login-page {
+    min-height: 100vh;
+    padding: 25px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--warm-ivory);
+}
+
+/* Login Container */
+.login-container {
+    width: 100%;
+    max-width: 460px;
+}
+
+/* Login Card */
+.login-card {
+    width: 100%;
+    padding: 35px;
+    background-color: #FFFFFF;
+    border: none;
+    border-top: 5px solid var(--soft-gold);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(36, 50, 71, 0.12);
+}
+
+/* Login Title */
+.login-title {
+    color: var(--deep-navy);
+    font-size: 28px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+/* Login Subtitle */
+.login-subtitle {
+    color: var(--forest-teal);
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+/* Form Labels */
+.login-card .form-label {
+    color: var(--deep-navy);
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Input Fields */
+.login-card .form-control {
+    padding: 12px;
+    border: 1px solid #D9DED8;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+
+/* Input Focus */
+.login-card .form-control:focus {
+    border-color: var(--soft-sage);
+    box-shadow: 0 0 0 0.2rem rgba(139, 166, 155, 0.25);
+}
+
+/* Login Button */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: var(--forest-teal);
+    border: 1px solid var(--forest-teal);
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.login-button:hover {
+    background-color: var(--deep-navy);
+    border-color: var(--deep-navy);
+    color: white;
+}
+
+/* Login Link */
+.login-card a {
+    color: var(--forest-teal);
+    font-weight: bold;
+}
+
+/* Responsive Login */
+@media (max-width: 576px) {
+
+    .login-card {
+        padding: 25px 20px;
+    }
+
+    .login-title {
+        font-size: 23px;
+    }
+}
+
+
+/* 
+   REGISTRATION PAGE
+ */
+
+.register-page {
+    min-height: 100vh;
+    padding: 30px 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--warm-ivory);
+    overflow-y: auto;
+}
+
+/* Registration Container */
+.register-container {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* Registration Card */
+.register-card {
+    padding: 35px;
+    background-color: #FFFFFF;
+    border: none;
+    border-top: 5px solid var(--soft-gold);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(36, 50, 71, 0.12);
+}
+
+/* Registration Title */
+.register-title {
+    color: var(--deep-navy);
+    font-size: 28px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Registration Subtitle */
+.register-subtitle {
+    color: var(--forest-teal);
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Registration Labels */
+.register-card .form-label {
+    color: var(--deep-navy);
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Registration Inputs */
+.register-card .form-control {
+    padding: 11px;
+    border: 1px solid #D9DED8;
+    border-radius: 8px;
+}
+
+.register-card .form-control:focus {
+    border-color: var(--soft-sage);
+    box-shadow: 0 0 0 0.2rem rgba(139, 166, 155, 0.25);
+}
+
+/* Registration Button */
+.register-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: var(--forest-teal);
+    border-color: var(--forest-teal);
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    border-radius: 8px;
+}
+
+.register-button:hover {
+    background-color: var(--deep-navy);
+    border-color: var(--deep-navy);
+    color: white;
+}
+
+/* Registration Links */
+.register-card a {
+    color: var(--forest-teal);
+    font-weight: bold;
+}
+
+/* Responsive Registration */
+@media (max-width: 576px) {
+
+    .register-card {
+        padding: 25px 20px;
+    }
+
+    .register-title {
+        font-size: 23px;
+    }
+}
+
+
+/* 
+   ADD ADMIN PAGE
+ */
+
+/* General Page */
+.admin-form-page {
+    min-height: 100vh;
+    background-color: var(--warm-ivory);
+    padding: 40px 15px;
+}
+
+/* Form Container */
+.admin-form-container {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* Form Card */
+.admin-form-card {
+    width: 100%;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 5px 25px rgba(36, 50, 71, 0.10);
+    overflow: hidden;
+}
+
+/* Form Header */
+.admin-form-header {
+    text-align: center;
+    padding: 30px 20px 15px;
+}
+
+/* Header Icon */
+.admin-form-icon {
+    width: 75px;
+    height: 75px;
+    background-color: var(--soft-sage);
+    color: var(--deep-navy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    margin: 0 auto 15px;
+}
+
+/* Form Title */
+.admin-form-title {
+    color: var(--deep-navy);
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Form Subtitle */
+.admin-form-subtitle {
+    color: #777777;
+    font-size: 15px;
+}
+
+/* Form Body */
+.admin-form-body {
+    padding: 20px 35px 35px;
+}
+
+/* Form Labels */
+.admin-form-page .form-label {
+    color: var(--deep-navy);
+    font-weight: 600;
+}
+
+/* Input Groups */
+.admin-form-page .input-group-text {
+    background-color: var(--warm-ivory);
+    color: var(--forest-teal);
+    border-color: #DDDDDD;
+}
+
+/* Input Fields */
+.admin-form-page .form-control {
+    width: 100%;
+    border-color: #DDDDDD;
+    padding: 11px;
+}
+
+.admin-form-page .form-control:focus {
+    border-color: var(--forest-teal);
+    box-shadow: 0 0 0 0.2rem rgba(54, 91, 88, 0.15);
+}
+
+/* Add Admin Buttons Container */
+.admin-form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Add Admin Button */
+.admin-submit-btn {
+    background-color: var(--deep-navy);
+    color: #FFFFFF;
+    border: none;
+    padding: 11px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.admin-submit-btn:hover {
+    background-color: var(--forest-teal);
+    color: #FFFFFF;
+}
+
+/* Back Button */
+.admin-back-btn {
+    background-color: var(--soft-sage);
+    color: var(--deep-navy);
+    border: none;
+    padding: 11px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.admin-back-btn:hover {
+    background-color: var(--soft-gold);
+    color: var(--deep-navy);
+}
+
+
+/* 
+   ADD ADMIN - TABLET RESPONSIVE
+ */
+
+@media (max-width: 768px) {
+
+    .admin-form-page {
+        padding: 30px 15px;
+    }
+
+    .admin-form-container {
+        max-width: 600px;
+    }
+
+    .admin-form-body {
+        padding: 25px;
+    }
+}
+
+
+/* 
+   ADD ADMIN - MOBILE RESPONSIVE
+ */
+
+@media (max-width: 576px) {
+
+    .admin-form-page {
+        padding: 20px 10px;
+    }
+
+    .admin-form-card {
+        border-radius: 12px;
+    }
+
+    .admin-form-header {
+        padding: 25px 15px 10px;
+    }
+
+    .admin-form-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 30px;
+    }
+
+    .admin-form-title {
+        font-size: 24px;
+    }
+
+    .admin-form-body {
+        padding: 15px 18px 25px;
+    }
+
+    /* Stack Buttons Vertically */
+    .admin-form-actions {
+        flex-direction: column;
+    }
+
+    .admin-form-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* 
+   ADD ADMIN - SMALL MOBILE
+ */
+
+@media (max-width: 400px) {
+
+    .admin-form-page {
+        padding: 12px 8px;
+    }
+
+    .admin-form-body {
+        padding: 15px 12px 20px;
+    }
+
+    .admin-form-title {
+        font-size: 21px;
+    }
+
+    .admin-form-subtitle {
+        font-size: 13px;
+    }
+
+    .admin-form-page .form-control {
+        font-size: 14px;
+        padding: 9px;
+    }
+
+    .admin-form-page .form-label {
+        font-size: 14px;
+    }
+
+}
+
+
+/* 
+   ADD NEW ADMIN SIDEBAR LINK
+ */
+
+.app-sidebar .add-admin-link {
+    background-color: var(--forest-teal);
+    color: var(--warm-ivory);
+    border: 1px solid var(--soft-sage);
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.app-sidebar .add-admin-link i {
+    color: var(--soft-gold);
+    margin-right: 8px;
+}
+
+.app-sidebar .add-admin-link:hover {
+    background-color: var(--soft-sage);
+    border-color: var(--soft-gold);
+    color: var(--deep-navy);
+}
+
+.app-sidebar .add-admin-link:hover i {
+    color: var(--deep-navy);
+}
+
+
+/* Center Add Admin Page */
+
+.admin-form-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+}
+
+.admin-form-container {
+    width: 100%;
+    max-width: 750px;
+    margin: auto;
+}
